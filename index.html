@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
-        
+
         :root {
             --primary-color: #4a6fa5;
             --secondary-color: #2e4057;
@@ -17,14 +18,15 @@
             --border-radius: 4px;
             --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
+        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Source Sans Pro', sans-serif;
         }
-        
+
         body {
             color: var(--text-color);
             line-height: 1.6;
@@ -32,8 +34,11 @@
             margin: 0 auto;
             padding: 30px;
             background-color: #fff;
+            position: relative;
+            /* For the gradient sidebar */
         }
-        
+
+        /* Header Section */
         header {
             display: grid;
             grid-template-columns: 1fr;
@@ -41,9 +46,8 @@
             margin-bottom: 40px;
             padding-bottom: 30px;
             border-bottom: 3px solid var(--accent-color);
-            position: relative;
         }
-        
+
         header::before {
             content: '';
             position: absolute;
@@ -54,7 +58,7 @@
             background-color: var(--light-bg);
             z-index: -1;
         }
-        
+
         h1 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -63,7 +67,7 @@
             letter-spacing: -0.5px;
             font-family: 'Roboto', sans-serif;
         }
-        
+
         h2 {
             font-size: 1.8rem;
             font-weight: 400;
@@ -71,52 +75,59 @@
             color: var(--secondary-color);
             font-family: 'Roboto', sans-serif;
         }
-        
+
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
             margin: 20px 0 10px;
             font-size: 1rem;
+            justify-content: center;
+            /* Center the contact info */
         }
-        
+
         .contact-info div {
             display: flex;
             align-items: center;
         }
-        
+
         .contact-info div::before {
             display: none;
         }
-        
+
         .contact-info a {
             color: var(--accent-color);
             text-decoration: none;
             transition: color 0.2s;
         }
-        
+
         .contact-info a:hover {
             color: var(--primary-color);
             text-decoration: underline;
         }
-        
+
+        /* Summary Section */
         .summary {
             margin-bottom: 40px;
             font-size: 1.1rem;
             line-height: 1.7;
             color: #444;
             max-width: 95%;
-            padding-left: 15px;
+            padding: 15px;
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
         }
-        
+
         .summary p {
             margin: 0;
         }
-        
+
+        /* Section Titles */
         .section {
             margin-bottom: 40px;
         }
-        
+
         .section-title {
             font-size: 1.5rem;
             font-weight: 600;
@@ -128,7 +139,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -138,7 +149,8 @@
             height: 3px;
             background: linear-gradient(to right, var(--accent-color), transparent);
         }
-        
+
+        /* Job Experience Section */
         .job {
             margin-bottom: 30px;
             padding: 20px;
@@ -147,12 +159,12 @@
             box-shadow: var(--box-shadow);
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        
+
         .job:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
         .job-header {
             display: flex;
             justify-content: space-between;
@@ -161,20 +173,20 @@
             padding-bottom: 10px;
             border-bottom: 1px dashed #ccc;
         }
-        
+
         .company {
             font-weight: 700;
             font-size: 1.2rem;
             color: var(--primary-color);
         }
-        
+
         .position {
             font-weight: 600;
             font-size: 1.1rem;
             color: var(--secondary-color);
             margin-top: 3px;
         }
-        
+
         .date {
             color: #666;
             font-weight: 500;
@@ -183,19 +195,19 @@
             border-radius: 15px;
             font-size: 0.9rem;
         }
-        
+
         .job-details ul {
             list-style-type: none;
             padding-left: 5px;
         }
-        
+
         .job-details li {
             margin-bottom: 10px;
             position: relative;
             padding-left: 25px;
             line-height: 1.5;
         }
-        
+
         .job-details li::before {
             content: '→';
             position: absolute;
@@ -203,13 +215,14 @@
             color: var(--accent-color);
             font-weight: bold;
         }
-        
+
+        /* Skills Section */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-        
+
         .skills-section {
             background-color: var(--light-bg);
             border-radius: var(--border-radius);
@@ -217,7 +230,7 @@
             box-shadow: var(--box-shadow);
             margin-bottom: 0;
         }
-        
+
         .skills-category {
             font-weight: 600;
             margin-bottom: 10px;
@@ -226,14 +239,14 @@
             border-bottom: 1px solid #ddd;
             padding-bottom: 5px;
         }
-        
+
         .skills-list {
             margin-bottom: 10px;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
-        
+
         .skill-tag {
             background-color: rgba(71, 163, 218, 0.15);
             color: var(--secondary-color);
@@ -244,18 +257,19 @@
             margin-bottom: 5px;
             transition: background-color 0.2s, transform 0.2s;
         }
-        
+
         .skill-tag:hover {
             background-color: rgba(71, 163, 218, 0.3);
             transform: scale(1.05);
         }
-        
+
+        /* Education Section */
         .education {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-        
+
         .education-item {
             background-color: var(--light-bg);
             border-radius: var(--border-radius);
@@ -263,89 +277,102 @@
             box-shadow: var(--box-shadow);
             transition: transform 0.2s;
         }
-        
+
         .education-item:hover {
             transform: translateY(-3px);
         }
-        
+
         .degree {
             font-weight: 600;
             color: var(--primary-color);
             font-size: 1.1rem;
             margin-bottom: 5px;
         }
-        
+
+        /* Media Queries */
         @media (max-width: 768px) {
             body {
                 padding: 20px;
             }
-            
+
             header::before {
                 left: -20px;
                 width: calc(100% + 40px);
             }
-            
+
             .job-header {
                 flex-direction: column;
             }
-            
+
             .date {
                 margin-top: 10px;
             }
-            
+
             .skills-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .education {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         @media print {
             body {
                 padding: 0;
                 max-width: 100%;
             }
-            
-            .job:hover, .education-item:hover {
+
+            .job:hover,
+            .education-item:hover {
                 transform: none;
                 box-shadow: var(--box-shadow);
             }
-            
-            .job, .skills-section, .education-item {
+
+            .job,
+            .skills-section,
+            .education-item {
                 break-inside: avoid;
             }
-            
+
             header::before {
                 display: none;
             }
-            
+
             @page {
                 margin: 1.5cm;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Paranjit Singh</h1>
         <h2>Front-End Engineer II</h2>
         <div class="contact-info">
-            <div><i class="far fa-envelope" style="margin-right: 8px; color: var(--accent-color);"></i> paranjiitsiingh@gmail.com</div>
-            <div><i class="fas fa-phone-alt" style="margin-right: 8px; color: var(--accent-color);"></i> +1-206-453-8364</div>
-            <div><i class="fab fa-linkedin" style="margin-right: 8px; color: var(--accent-color);"></i> <a href="https://www.linkedin.com/in/paranjitsingh">www.linkedin.com/in/paranjitsingh</a></div>
-            <div><i class="fas fa-map-marker-alt" style="margin-right: 8px; color: var(--accent-color);"></i> Kirkland, WA</div>
+            <div><i class="far fa-envelope" style="margin-right: 8px; color: var(--accent-color);"></i>
+                paranjitsiingh@gmail.com</div>
+            <div><i class="fas fa-phone-alt" style="margin-right: 8px; color: var(--accent-color);"></i>
+                +1-206-453-8364</div>
+            <div><i class="fab fa-linkedin" style="margin-right: 8px; color: var(--accent-color);"></i> <a
+                    href="https://www.linkedin.com/in/paranjitsingh">www.linkedin.com/in/paranjitsingh</a></div>
+            <div><i class="fas fa-map-marker-alt" style="margin-right: 8px; color: var(--accent-color);"></i> Kirkland, WA
+            </div>
         </div>
     </header>
-    
+
     <div class="summary">
-        <p>A proactive and results-driven Front-End Engineer II at Amazon with over 10 years of experience delivering innovative, user-centric web applications. Skilled in Web Components, React, TypeScript, and HTML5, with a strong focus on building scalable, high-performance interfaces. Adept at working in Agile environments, partnering with cross-functional teams to apply engineering best practices and consistently deliver high-quality solutions that drive business impact.</p>
+        <p>A proactive and results-driven Front-End Engineer II at Amazon with over 10 years of experience delivering
+            innovative, user-centric web applications. Skilled in Web Components, React, TypeScript, and HTML5, with a
+            strong focus on building scalable, high-performance interfaces. Adept at working in Agile environments,
+            partnering with cross-functional teams to apply engineering best practices and consistently deliver
+            high-quality solutions that drive business impact.</p>
     </div>
-    
+
     <div class="section">
         <h3 class="section-title">Professional Experience</h3>
-        
+
         <div class="job">
             <div class="job-header">
                 <div>
@@ -356,14 +383,19 @@
             </div>
             <div class="job-details">
                 <ul>
-                    <li>Currently part of the Design System Platform team at Amazon, building a scalable, reusable web components library using Lit to accelerate development for Seller Central Builder teams.</li>
-                    <li>Led a team of three engineers to design and develop a full-stack React web application from the ground up, implementing robust back-end Java services, an intuitive front-end UI, and scalable data storage using Amazon DynamoDB.</li>
-                    <li>Enhanced internal tools for the Amazon Seller Pricing team, using React, supporting dynamic and competitive pricing strategies.</li>
-                    <li>Extended and optimized QuickSight front-end chart components, improving performance and visualization capabilities for key business insights.</li>
+                    <li>Currently part of the Design System Platform team at Amazon, building a scalable, reusable web
+                        components library using Lit to accelerate development for Seller Central Builder teams.</li>
+                    <li>Led a team of three engineers to design and develop a full-stack React web application from the
+                        ground up, implementing robust back-end Java services, an intuitive front-end UI, and scalable data
+                        storage using Amazon DynamoDB.</li>
+                    <li>Enhanced internal tools for the Amazon Seller Pricing team, using React, supporting dynamic and
+                        competitive pricing strategies.</li>
+                    <li>Extended and optimized QuickSight front-end chart components, improving performance and visualization
+                        capabilities for key business insights.</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="job">
             <div class="job-header">
                 <div>
@@ -374,13 +406,16 @@
             </div>
             <div class="job-details">
                 <ul>
-                    <li>Architected and developed the core framework for multiple enterprise-grade, React-based software applications, ensuring scalability and performance.</li>
-                    <li>Led a team of 8 UI engineers, overseeing the technical execution of 3 concurrent projects from design to deployment.</li>
-                    <li>Mentored and onboarded new team members, fostering best practices in front-end development and Agile methodologies.</li>
+                    <li>Architected and developed the core framework for multiple enterprise-grade, React-based software
+                        applications, ensuring scalability and performance.</li>
+                    <li>Led a team of 8 UI engineers, overseeing the technical execution of 3 concurrent projects from
+                        design to deployment.</li>
+                    <li>Mentored and onboarded new team members, fostering best practices in front-end development and Agile
+                        methodologies.</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="job">
             <div class="job-header">
                 <div>
@@ -391,13 +426,16 @@
             </div>
             <div class="job-details">
                 <ul>
-                    <li>Collaborated directly with clients to gather and refine requirements for a new system initiative.</li>
-                    <li>Designed the React/Redux-based front-end architecture and led the initial technical planning using modern web technologies.</li>
-                    <li>Developed and delivered the first working prototype, effectively demonstrating the proposed system's architecture and capabilities.</li>
+                    <li>Collaborated directly with clients to gather and refine requirements for a new system initiative.
+                    </li>
+                    <li>Designed the React/Redux-based front-end architecture and led the initial technical planning using
+                        modern web technologies.</li>
+                    <li>Developed and delivered the first working prototype, effectively demonstrating the proposed system's
+                        architecture and capabilities.</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="job">
             <div class="job-header">
                 <div>
@@ -408,13 +446,16 @@
             </div>
             <div class="job-details">
                 <ul>
-                    <li>Developed and maintained a React/Redux-based content management system for the financial industry, enhancing user experience and streamlining content delivery.</li>
-                    <li>Designed and implemented cross-browser and cross-platform UI components using JavaScript and React.</li>
-                    <li>Engaged directly with clients to gather, refine, and validate requirements, ensuring alignment with business goals.</li>
+                    <li>Developed and maintained a React/Redux-based content management system for the financial industry,
+                        enhancing user experience and streamlining content delivery.</li>
+                    <li>Designed and implemented cross-browser and cross-platform UI components using JavaScript and React.
+                    </li>
+                    <li>Engaged directly with clients to gather, refine, and validate requirements, ensuring alignment with
+                        business goals.</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="job">
             <div class="job-header">
                 <div>
@@ -425,14 +466,18 @@
             </div>
             <div class="job-details">
                 <ul>
-                    <li>Developed an in-house hybrid mobile application framework and custom plugins as part of the Pega Mobile Engineering team.</li>
-                    <li>Built and deployed multiple cross-platform hybrid mobile applications, enhancing accessibility across devices.</li>
-                    <li>Integrated platform-agnostic features into Pega's flagship PRPC product, ensuring a consistent user experience across environments.</li>
-                    <li>Designed and implemented reusable UI components to streamline development and improve UI consistency.</li>
+                    <li>Developed an in-house hybrid mobile application framework and custom plugins as part of the Pega
+                        Mobile Engineering team.</li>
+                    <li>Built and deployed multiple cross-platform hybrid mobile applications, enhancing accessibility across
+                        devices.</li>
+                    <li>Integrated platform-agnostic features into Pega's flagship PRPC product, ensuring a consistent user
+                        experience across environments.</li>
+                    <li>Designed and implemented reusable UI components to streamline development and improve UI
+                        consistency.</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="job">
             <div class="job-header">
                 <div>
@@ -443,12 +488,14 @@
             </div>
             <div class="job-details">
                 <ul>
-                    <li>Developed hybrid mobile applications using Intel XDK, ensuring compatibility across multiple platforms.</li>
-                    <li>Contributed to the design and implementation of a core base framework to be reused across multiple hybrid mobile projects, enhancing development efficiency and consistency.</li>
+                    <li>Developed hybrid mobile applications using Intel XDK, ensuring compatibility across multiple
+                        platforms.</li>
+                    <li>Contributed to the design and implementation of a core base framework to be reused across multiple
+                        hybrid mobile projects, enhancing development efficiency and consistency.</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="job">
             <div class="job-header">
                 <div>
@@ -459,69 +506,75 @@
             </div>
             <div class="job-details">
                 <ul>
-                    <li>Contributed to backend and native/hybrid mobile application development to automate new business acquisition processes for the insurance industry.</li>
-                    <li>Researched and integrated emerging web and mobile technologies into legacy systems, modernizing application capabilities.</li>
-                    <li>Designed and implemented RESTful web services to enhance interoperability for existing Java-based applications.</li>
-                    <li>Built hybrid mobile applications using Apache Cordova and jQuery Mobile, enabling cross-platform functionality and improved user reach.</li>
+                    <li>Contributed to backend and native/hybrid mobile application development to automate new business
+                        acquisition processes for the insurance industry.</li>
+                    <li>Researched and integrated emerging web and mobile technologies into legacy systems, modernizing
+                        application capabilities.</li>
+                    <li>Designed and implemented RESTful web services to enhance interoperability for existing Java-based
+                        applications.</li>
+                    <li>Built hybrid mobile applications using Apache Cordova and jQuery Mobile, enabling cross-platform
+                        functionality and improved user reach.</li>
                 </ul>
             </div>
         </div>
     </div>
-    
+
     <div class="section">
         <h3 class="section-title">Skills</h3>
-        
-        <div class="skills-section">
-            <div class="skills-category">Languages & Frameworks</div>
-            <div class="skills-list">
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">JavaScript (ES6)</span>
-                <span class="skill-tag">TypeScript</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Redux</span>
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">SCSS</span>
-                <span class="skill-tag">Web Components</span>
+
+        <div class="skills-container">
+            <div class="skills-section">
+                <div class="skills-category">Languages & Frameworks</div>
+                <div class="skills-list">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript (ES6)</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Redux</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">SCSS</span>
+                    <span class="skill-tag">Web Components</span>
+                </div>
             </div>
-        </div>
-        
-        <div class="skills-section">
-            <div class="skills-category">Tools & Technologies</div>
-            <div class="skills-list">
-                <span class="skill-tag">Webpack</span>
-                <span class="skill-tag">Babel</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Jest</span>
-                <span class="skill-tag">ESLint</span>
-                <span class="skill-tag">JSON</span>
-                <span class="skill-tag">AJAX</span>
-                <span class="skill-tag">RESTful APIs</span>
-                <span class="skill-tag">Responsive Design</span>
+
+            <div class="skills-section">
+                <div class="skills-category">Tools & Technologies</div>
+                <div class="skills-list">
+                    <span class="skill-tag">Webpack</span>
+                    <span class="skill-tag">Babel</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Jest</span>
+                    <span class="skill-tag">ESLint</span>
+                    <span class="skill-tag">JSON</span>
+                    <span class="skill-tag">AJAX</span>
+                    <span class="skill-tag">RESTful APIs</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
             </div>
-        </div>
-        
-        <div class="skills-section">
-            <div class="skills-category">Development & Collaboration</div>
-            <div class="skills-list">
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Browser DevTools</span>
-                <span class="skill-tag">InVision</span>
-                <span class="skill-tag">Sublime Text</span>
-                <span class="skill-tag">WebStorm</span>
+
+            <div class="skills-section">
+                <div class="skills-category">Development & Collaboration</div>
+                <div class="skills-list">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Browser DevTools</span>
+                    <span class="skill-tag">InVision</span>
+                    <span class="skill-tag">Sublime Text</span>
+                    <span class="skill-tag">WebStorm</span>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <div class="section">
         <h3 class="section-title">Education</h3>
-        
+
         <div class="education">
             <div class="education-item">
                 <div class="degree">MS in Computer Science</div>
                 <div>University of Washington, Tacoma, WA</div>
             </div>
-            
+
             <div class="education-item">
                 <div class="degree">B.Tech. in Computer Science Engineering</div>
                 <div>Guru Gobind Singh Indraprastha University, Delhi, India</div>
@@ -529,4 +582,5 @@
         </div>
     </div>
 </body>
+
 </html>
