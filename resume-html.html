@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paranjit Singh - Front End Engineer II</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin: 5px 0;
+            color: #3498db;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .summary {
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .job {
+            margin-bottom: 25px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .company {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .position {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .date {
+            color: #7f8c8d;
+        }
+        .job-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .job-details li {
+            margin-bottom: 5px;
+        }
+        .skills-section {
+            margin-bottom: 20px;
+        }
+        .skills-category {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        .skills-list {
+            margin-bottom: 10px;
+        }
+        .education-item {
+            margin-bottom: 15px;
+        }
+        .degree {
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .job-header {
+                flex-direction: column;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Paranjit Singh</h1>
+        <h2>Front End Engineer II</h2>
+        <div class="contact-info">
+            <div>paranjiitsiingh@gmail.com</div>
+            <div>+1-206-453-8364</div>
+            <div><a href="https://www.linkedin.com/in/paranjitsingh">www.linkedin.com/in/paranjitsingh</a></div>
+            <div>Kirkland, WA</div>
+        </div>
+    </header>
+    
+    <div class="summary">
+        <p>A proactive and results-driven Front-End Engineer II at Amazon with over 10 years of experience delivering innovative, user-centric web applications. Skilled in Web Components, React, TypeScript, and HTML5, with a strong focus on building scalable, high-performance interfaces. Adept at working in Agile environments, partnering with cross-functional teams to apply engineering best practices and consistently deliver high-quality solutions that drive business impact.</p>
+    </div>
+    
+    <div class="section">
+        <h3 class="section-title">Professional Experience</h3>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="company">Amazon, Seattle</div>
+                    <div class="position">Front-End Engineer II</div>
+                </div>
+                <div class="date">December 2018 — Present</div>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Currently part of the Design System Platform team at Amazon, building a scalable, reusable web components library using Lit to accelerate development for Seller Central Builder teams.</li>
+                    <li>Led a team of three engineers to design and develop a full-stack React web application from the ground up, implementing robust back-end Java services, an intuitive front-end UI, and scalable data storage using Amazon DynamoDB.</li>
+                    <li>Enhanced internal tools for the Amazon Seller Pricing team, using React, supporting dynamic and competitive pricing strategies.</li>
+                    <li>Extended and optimized QuickSight front-end chart components, improving performance and visualization capabilities for key business insights.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="company">Sapient, New York</div>
+                    <div class="position">Senior Interactive Developer L2</div>
+                </div>
+                <div class="date">December 2017 — November 2018</div>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Architected and developed the core framework for multiple enterprise-grade, React-based software applications, ensuring scalability and performance.</li>
+                    <li>Led a team of 8 UI engineers, overseeing the technical execution of 3 concurrent projects from design to deployment.</li>
+                    <li>Mentored and onboarded new team members, fostering best practices in front-end development and Agile methodologies.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="company">Sapient, New York</div>
+                    <div class="position">Intern</div>
+                </div>
+                <div class="date">September 2017 — December 2017</div>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Collaborated directly with clients to gather and refine requirements for a new system initiative.</li>
+                    <li>Designed the React/Redux-based front-end architecture and led the initial technical planning using modern web technologies.</li>
+                    <li>Developed and delivered the first working prototype, effectively demonstrating the proposed system's architecture and capabilities.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="company">Sapient, Noida, India</div>
+                    <div class="position">Senior Interactive Developer L1</div>
+                </div>
+                <div class="date">January 2015 — August 2016</div>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Developed and maintained a React/Redux-based content management system for the financial industry, enhancing user experience and streamlining content delivery.</li>
+                    <li>Designed and implemented cross-browser and cross-platform UI components using JavaScript and React.</li>
+                    <li>Engaged directly with clients to gather, refine, and validate requirements, ensuring alignment with business goals.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="company">Pegasystems, Hyderabad, India</div>
+                    <div class="position">Senior Software Engineer</div>
+                </div>
+                <div class="date">December 2012 — December 2014</div>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Developed an in-house hybrid mobile application framework and custom plugins as part of the Pega Mobile Engineering team.</li>
+                    <li>Built and deployed multiple cross-platform hybrid mobile applications, enhancing accessibility across devices.</li>
+                    <li>Integrated platform-agnostic features into Pega's flagship PRPC product, ensuring a consistent user experience across environments.</li>
+                    <li>Designed and implemented reusable UI components to streamline development and improve UI consistency.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="company">ProKarma, Hyderabad, India</div>
+                    <div class="position">Software Engineer</div>
+                </div>
+                <div class="date">September 2012 — November 2012</div>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Developed hybrid mobile applications using Intel XDK, ensuring compatibility across multiple platforms.</li>
+                    <li>Contributed to the design and implementation of a core base framework to be reused across multiple hybrid mobile projects, enhancing development efficiency and consistency.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="company">CSC, Hyderabad, India</div>
+                    <div class="position">Software Engineer</div>
+                </div>
+                <div class="date">August 2010 — September 2012</div>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Contributed to backend and native/hybrid mobile application development to automate new business acquisition processes for the insurance industry.</li>
+                    <li>Researched and integrated emerging web and mobile technologies into legacy systems, modernizing application capabilities.</li>
+                    <li>Designed and implemented RESTful web services to enhance interoperability for existing Java-based applications.</li>
+                    <li>Built hybrid mobile applications using Apache Cordova and jQuery Mobile, enabling cross-platform functionality and improved user reach.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3 class="section-title">Skills</h3>
+        
+        <div class="skills-section">
+            <div class="skills-category">Languages & Frameworks</div>
+            <div class="skills-list">Java, JavaScript (ES6), TypeScript, React, Redux, HTML5, CSS, SCSS, Web Components</div>
+        </div>
+        
+        <div class="skills-section">
+            <div class="skills-category">Tools & Technologies</div>
+            <div class="skills-list">Webpack, Babel, Node.js, Jest, ESLint, JSON, AJAX, RESTful APIs, Responsive Design</div>
+        </div>
+        
+        <div class="skills-section">
+            <div class="skills-category">Development & Collaboration</div>
+            <div class="skills-list">Git, Browser DevTools, InVision, Sublime Text, WebStorm</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3 class="section-title">Education</h3>
+        
+        <div class="education-item">
+            <div class="degree">MS in Computer Science</div>
+            <div>University of Washington, Tacoma, WA</div>
+        </div>
+        
+        <div class="education-item">
+            <div class="degree">B.Tech. in Computer Science Engineering</div>
+            <div>Guru Gobind Singh Indraprastha University, Delhi, India</div>
+        </div>
+    </div>
+</body>
+</html>
